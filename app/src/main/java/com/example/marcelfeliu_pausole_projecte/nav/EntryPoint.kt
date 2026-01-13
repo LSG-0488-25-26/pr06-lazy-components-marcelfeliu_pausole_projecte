@@ -5,6 +5,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.marcelfeliu_pausole_projecte.view.DetailScreen
 import com.example.marcelfeliu_pausole_projecte.view.LazyColumnCharacters
 import com.example.marcelfeliu_pausole_projecte.viewmodel.RickAndMortyViewModel
 
@@ -16,6 +17,7 @@ fun EntryPoint(navigationController: NavController, viewModel: RickAndMortyViewM
         startDestination = Routes.CharactersList.route
     ) {
         composable (Routes.CharactersList.route) { LazyColumnCharacters(navigationController, viewModel) }
+        composable (Routes.DetailScreen.route) { DetailScreen(navigationController, viewModel) }
 
     }
 }
