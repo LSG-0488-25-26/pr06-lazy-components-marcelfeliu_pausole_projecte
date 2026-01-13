@@ -22,8 +22,7 @@ class RickAndMortyViewModel : ViewModel() {
 
     val characters: LiveData<MutableList<RMCharacter>> = _characters
 
-    private val _currentCharacter = RMCharacter("", "", "", "", R.drawable.rick)
-    val currentCharacter = _currentCharacter
-
+    private val _currentCharacter = MutableLiveData(RMCharacter("", "", "", "", R.drawable.rick))
+    var currentCharacter: LiveData<RMCharacter> = _currentCharacter
 
 }
