@@ -19,11 +19,11 @@ import androidx.compose.ui.unit.dp
 import com.example.marcelfeliu_pausole_projecte.model.RMCharacter
 
 @Composable
-fun RMCharacterItem(character: RMCharacter) {
+fun RMCharacterItem(character: RMCharacter, onSelectedItem: ()-> Unit) {
     Card(modifier = Modifier
             .fillMaxWidth()
             // Afegir propietat clickable i li definim el comportament
-            .clickable { }
+            .clickable { onSelectedItem() }
     ) {
         Row {
             Image(
